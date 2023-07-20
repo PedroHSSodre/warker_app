@@ -1,2 +1,0 @@
-# warker_app
- 

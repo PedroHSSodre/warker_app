@@ -1,0 +1,10 @@
+{
+  "expo": {
+    "name": "warker_app",
+    "slug": "warker_app",
+    "version": "1.0.0",
+    "assetBundlePatterns": [
+      "**/*"
+    ]
+  }
+}
