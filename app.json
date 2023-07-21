@@ -5,6 +5,14 @@
     "version": "1.0.0",
     "assetBundlePatterns": [
       "**/*"
+    ],
+    "plugins": [
+      [
+        "expo-location",
+        {
+          "locationAlwaysAndWhenInUsePermission": "Allow Warker to use your location."
+        }
+      ]
     ]
   }
 }
