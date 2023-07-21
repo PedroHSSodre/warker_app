@@ -1,11 +1,15 @@
 {
   "expo": {
-    "name": "warker_app",
+    "name": "Warker App",
     "slug": "warker_app",
     "version": "1.0.0",
     "assetBundlePatterns": [
       "**/*"
     ],
+    "splash": {
+      "image": "./assets/warker_splash.png"
+    },
+    "icon": "./assets/warker_splash.png",
     "plugins": [
       [
         "expo-location",
