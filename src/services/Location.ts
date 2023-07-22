@@ -1,7 +1,7 @@
 import * as Location from "expo-location";
 
 
-export const getLocation = async () => {
+export const getUserLocation = async () => {
     try {
         let { status } = await Location.requestForegroundPermissionsAsync();
 
