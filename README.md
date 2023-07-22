@@ -20,7 +20,7 @@ Essas são as principais tecnologias utilizadas neste projeto:
 
 1. **styled-components**: Eu escolhi essa biblioteca para estilização dos componentes de forma eficiente e intuitiva, junto do Typescript ela traz uma agilidade muito grande. 
 
-2. **context api**: API de contexto do React utilizada para gerenciar o estado global da aplicação.
+2. **context api**: API de contexto do React utilizada para gerenciar o estado global da aplicação, nele foi incluido as estaçÕes de gás e informações de localização.
 
 3. **react-native-maps**: Componente para integração de mapas interativos em aplicações React Native, possibilitando a exibição de mapas e marcadores geográficos. Foi escolhida por atender bem aos requisitos que esse app precisava, é uma biblioteca atualizada e muito completa.
 
