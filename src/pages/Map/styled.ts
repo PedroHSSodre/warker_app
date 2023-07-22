@@ -21,3 +21,16 @@ export const ButtonContainer = styled.View`
     justify-content: center;
     align-items: center;
 `;
+
+export const CalloutContainer = styled.View`
+    height: 40px;
+    justify-content: center;
+    align-items: center;
+    background: ${props => props.theme.colors.WHITE};
+    padding: 8px;
+    border-radius: 24px;
+`
+
+export const CalloutText = styled.Text`
+
+`

@@ -1,5 +1,9 @@
 ## Incialização
 ```bash
+# Clone o projeto na sua maquina
+$ git clone https://github.com/PedroHSSodre/warker_app.git
+
+# Instale as depêndencias
 $ npm install
 ```
 

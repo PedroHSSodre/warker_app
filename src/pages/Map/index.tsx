@@ -1,7 +1,7 @@
-import MapView, { Marker } from 'react-native-maps';
+import MapView, { Marker, Callout } from 'react-native-maps';
 import { useContext } from 'react';
 
-import { ButtonContainer, Container, InputSearchContainer } from "./styled";
+import { ButtonContainer, Container, InputSearchContainer, CalloutText, CalloutContainer } from "./styled";
 
 import Button from '../../components/Button';
 import CitiesAutoComplete from '../../components/CitiesAutoComplete';
@@ -52,7 +52,13 @@ function Map() {
                                 latitude: gasStation.coords.latitude, 
                                 longitude: gasStation.coords.longitude,
                             }}
-                        />
+                        >
+                            <Callout tooltip>
+                                <CalloutContainer>
+                                    <CalloutText>O reposítorio tem {(gasStation.repository * 100).toFixed(2)}% de sua capacidade.</CalloutText>
+                                </CalloutContainer>
+                            </Callout>
+                        </Marker>
                     ))
                 }
             </MapView>
