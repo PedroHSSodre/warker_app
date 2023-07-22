@@ -44,12 +44,13 @@ function CitiesAutoComplete({ selectAction }: CitiesAutoCompleteProps) {
         }
 
         selectAction(location);
-
         setShowList(false);
     };
-
+    
     return (
-        <Container>
+        <Container
+            showList={showList}
+        >
             <InputText 
                 iconName="search-outline"
                 placeholder="Procure por uma cidade"
@@ -60,6 +61,7 @@ function CitiesAutoComplete({ selectAction }: CitiesAutoCompleteProps) {
             {
                 showList ? (
                     <FlatList
+                        keyboardShouldPersistTaps="handled"
                         data={filteredCities}
                         renderItem={({ item: city }) => (
                                 <ListItem 
