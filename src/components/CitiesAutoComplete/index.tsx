@@ -63,7 +63,6 @@ function CitiesAutoComplete({ selectAction }: CitiesAutoCompleteProps) {
                     <FlatList
                         keyboardShouldPersistTaps="handled"
                         data={filteredCities}
-                        onEndReached={() => console.log("no final")}
                         renderItem={({ item: city }) => (
                                 <ListItem 
                                     city={city} 

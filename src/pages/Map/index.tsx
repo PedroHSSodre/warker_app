@@ -46,7 +46,6 @@ function Map() {
                 {
                     gasStations.map(gasStation => (
                         <Marker 
-                            onPress={() => console.log(gasStation)}
                             pinColor={gasStation.repository >= 0.5 ? "green" : "red"}
                             key={gasStation.id}
                             coordinate={{
