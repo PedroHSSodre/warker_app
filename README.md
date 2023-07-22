@@ -11,6 +11,9 @@ $ npm run android
 
 # Warker App 
 
+# Descricao
+App de teste para a vaga na W16, nele o usuário tem acesso ao mapa com os postos mais próximos a ele, podendo buscar cidades ou ir até o posto mais próximo somente clicando em um botão.
+Os postos com pin na cor vermelha estão com seus repositórios abaixo dos 50%, já os postos com o pin ver significa que estão com seus repositórios acima de 50% da capacidade.
 ## Tecnologias utilizadas
 
 Essas são as principais tecnologias utilizadas neste projeto:
