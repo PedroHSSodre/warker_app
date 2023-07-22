@@ -1,7 +1,9 @@
-import { Container, Text } from "./styled";
-import { ButtonProps } from "../../types/Button";
 import { Ionicons } from "@expo/vector-icons";
+
+import { Container, Text } from "./styled";
 import theme from "../../style/theme";
+
+import { ButtonProps } from "../../types/Button";
 
 function Button({ onPress, text, iconName, size = "lg" }: ButtonProps) {
     return (
