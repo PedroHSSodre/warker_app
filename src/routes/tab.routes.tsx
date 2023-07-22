@@ -10,7 +10,20 @@ const Tab = createBottomTabNavigator();
 
 function TabRoutes() {
   return (
-    <Tab.Navigator screenOptions={{ headerShown: false }}>
+    <Tab.Navigator 
+      screenOptions={
+        { 
+          headerShown: false, 
+          tabBarStyle: { 
+            height: 75 
+          }, 
+          tabBarLabelStyle: {
+            fontSize: 20, 
+            color: theme.colors.GRAY_300 
+          }
+        }
+      }
+    >
         <Tab.Screen 
             name="Map" 
             options={{
@@ -18,14 +31,6 @@ function TabRoutes() {
               tabBarIcon: () => <Ionicons name='home-outline' size={theme.fontSize.md}/>
             }}
             component={Map} 
-        />
-        <Tab.Screen 
-            name="Favorites" 
-            options={{
-              title: "Favoritos",
-              tabBarIcon: () => <Ionicons name='star-outline' size={theme.fontSize.md}/>
-            }}
-            component={Favorites} 
         />
     </Tab.Navigator>
   );
