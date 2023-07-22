@@ -1,4 +1,4 @@
-import axios from "axios";
+import { api } from "../config/api";
 
 import { BASE_URL } from "../utils/contants";
 import calculateDistance from "../utils/calculateDistance";
@@ -9,7 +9,7 @@ import { GasStationDto } from "../types/GasStation";
 export const getGasStations = async (city: number) => {
     try {
         const routeUrl = `${BASE_URL}/cities/${city}/gas_stations`;
-        const { data } = await axios.get(routeUrl);
+        const { data } = await api.get(routeUrl);
 
         return data.data;
     } catch(err) {
