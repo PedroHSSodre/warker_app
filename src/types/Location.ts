@@ -4,3 +4,8 @@ export interface LocationDto {
         lon: number;
     }
 }
+
+export interface CoordinatesDto {
+    latitude: number;
+    longitude: number;
+}
