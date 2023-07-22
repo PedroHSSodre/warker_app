@@ -24,6 +24,6 @@ Essas são as principais tecnologias utilizadas neste projeto:
 4. **typescript**: Além do aumento da produtividade, a inteligencia da IDE(Intellisense) o Typescript ajuda a prevenir muitos erros em 
 tempo de desenvolvimento, tornando o código mais confiável.
 
-5. **expo**: Escolhi o expo pela agilidade em certos processos, como configuração de splashscreen, icone do app e build, utilizei o expo bare workflow pois ele da mais liberdade de configuração como um projeto criado com o React Native CLI.
+5. **react-navigation**: A biblioteca React Navigation tem ótimas ferramentas para navegação de telas, nesse projeto foi criado dois tipos de navegação, a "Tab Navigation" e "Stack Navigation".
 
 6. **axios**: O axios torna o processo de comunicação com o servidor mais simples, eficiente e intuitivo. Por esse motivo escolhi utiliza-lo nesse projeto.
