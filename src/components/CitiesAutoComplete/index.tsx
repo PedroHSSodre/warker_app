@@ -22,7 +22,7 @@ function CitiesAutoComplete({ selectAction }: CitiesAutoCompleteProps) {
     }, []);
 
     const getAutoCompleteData = async () => {
-        const cities = await CitiesService.getCities();
+        const cities = await CitiesService.getCities(50);
 
         setCities(cities.data);
     }
@@ -63,6 +63,7 @@ function CitiesAutoComplete({ selectAction }: CitiesAutoCompleteProps) {
                     <FlatList
                         keyboardShouldPersistTaps="handled"
                         data={filteredCities}
+                        onEndReached={() => console.log("no final")}
                         renderItem={({ item: city }) => (
                                 <ListItem 
                                     city={city} 

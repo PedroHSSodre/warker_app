@@ -2,9 +2,9 @@ import { LocationDto } from "../types/Location";
 
 import { api } from "../config/api";
 
-export const getCities = async () => {
+export const getCities = async (perPage?: number) => {
     try {
-        const { data } = await api.get("/cities");
+        const { data } = await api.get(`/cities?per_page=${perPage || 10}`);
 
         return data;
     } catch(err) {
