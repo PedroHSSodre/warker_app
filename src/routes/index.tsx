@@ -5,9 +5,10 @@ import { ThemeProvider } from "styled-components";
 
 import StackRoutes from "./stack.routes";
 
-import theme from "../style/theme";
 import { LocationProvider } from "../contexts/Locatio";
 import { GasStationProvider } from "../contexts/GasStation";
+
+import theme from "../style/theme";
 
 function Routes() {
     return (
