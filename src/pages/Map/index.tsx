@@ -1,52 +1,28 @@
 import MapView, { Marker } from 'react-native-maps';
+import { useContext } from 'react';
 
 import { ButtonContainer, Container, InputSearchContainer } from "./styled";
-import { useEffect, useState } from 'react';
-import * as Location from '../../service/Location';
-import { LocationDto } from '../../types/Location';
-import { getCitiesNearBy } from '../../service/Cities';
-import { getGasStations } from '../../service/GasStations';
+
 import Button from '../../components/Button';
-import InputSearch from '../../components/InputSearch';
+import CitiesAutoComplete from '../../components/CitiesAutoComplete';
 
-
+import { LocationDto } from '../../types/Location';
+import LocationContext from '../../contexts/Locatio';
+import GasStationContext from '../../contexts/GasStation';
 
 function Map() {
-    const [location, setLocation] = useState<LocationDto>({
-        coords: {
-            lat: 37.78825,
-            lon: -122.4324,
-        }
-    });
-    const [cities, setCities] = useState([]);
-    const [nearBy, setNearBy] = useState({});
-    const [gasStations, setGasStations] = useState([]);
-
-    useEffect(() => {
-        getMapsData();
-    }, []);
-
-    const getMapsData = async () => {
-        const location = await Location.getLocation();
-        const nearBy = await getCitiesNearBy(location);
-        const gasStations = await getGasStations(nearBy.id)
-        
-        
-        setLocation(location);
-        setNearBy(nearBy);
-        setGasStations(gasStations)
-    }
-
-    const handleGoToNearbyGasStation = () => {
-
-    }
+    const { 
+        handleGoToNearbyGasStation, 
+        region, 
+        setRegion 
+    } = useContext(LocationContext);
+    const { gasStations } = useContext(GasStationContext);
 
     return (
         <Container>
             <InputSearchContainer>
-                <InputSearch 
-                    placeholder='Procure por um posto'
-                    value="florianopolis"
+                <CitiesAutoComplete 
+                    selectAction={(location: LocationDto) => setRegion(location)}
                 />
             </InputSearchContainer>
             <MapView
@@ -57,10 +33,9 @@ function Map() {
                     longitudeDelta: 0.0421,
                 }}
                 showsUserLocation
-                loadingEnabled
                 region={{
-                    latitude: location.coords.lat,
-                    longitude: location.coords.lon,
+                    latitude: region.coords.lat,
+                    longitude: region.coords.lon,
                     latitudeDelta: 0.0922,
                     longitudeDelta: 0.0421
                 }}
@@ -76,7 +51,7 @@ function Map() {
                             key={gasStation.id}
                             coordinate={{
                                 latitude: gasStation.coords.latitude, 
-                                longitude: gasStation.coords.longitude
+                                longitude: gasStation.coords.longitude,
                             }}
                         />
                     ))
