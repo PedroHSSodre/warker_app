@@ -17,14 +17,14 @@ $ npm run android
 
 # Descricao
 App de teste para a vaga na W16, nele o usuário tem acesso ao mapa com os postos mais próximos a ele, podendo buscar cidades ou ir até o posto mais próximo somente clicando em um botão.
-Os postos com pin na cor vermelha estão com seus repositórios abaixo dos 50%, já os postos com o pin ver significa que estão com seus repositórios acima de 50% da capacidade.
+Os postos com pin na cor vermelha estão com seus repositórios abaixo dos 50%, já os postos com o pin verde significa que estão com seus repositórios acima de 50% da capacidade.
 ## Tecnologias utilizadas
 
 Essas são as principais tecnologias utilizadas neste projeto:
 
 1. **styled-components**: Eu escolhi essa biblioteca para estilização dos componentes de forma eficiente e intuitiva, junto do Typescript ela traz uma agilidade muito grande. 
 
-2. **context api**: API de contexto do React utilizada para gerenciar o estado global da aplicação, nele foi incluido as estaçÕes de gás e informações de localização.
+2. **context api**: API de contexto do React utilizada para gerenciar o estado global da aplicação, nele foi incluido as estações de gás e informações de localização.
 
 3. **react-native-maps**: Componente para integração de mapas interativos em aplicações React Native, possibilitando a exibição de mapas e marcadores geográficos. Foi escolhida por atender bem aos requisitos que esse app precisava, é uma biblioteca atualizada e muito completa.
 
